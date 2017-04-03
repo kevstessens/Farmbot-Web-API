@@ -2,7 +2,7 @@
 # Mostly used for creation of jwt.pem- which is used to verify authenticity of
 # JSON Web Tokens
 class KeyGen
-  PROD_KEY_FILE    = "/keys/production.pem"
+  PROD_KEY_FILE    = "production.pem"
   KEY_FILE         = "jwt.#{Rails.env}.pem"
   SAVE_PATH        = (Rails.env == "production") ? PROD_KEY_FILE : KEY_FILE
 

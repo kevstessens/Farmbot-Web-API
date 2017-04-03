@@ -17,7 +17,7 @@ module PasswordResets
 private
 
     def send_email
-      UserMailer.password_reset(user, token).deliver_later
+      UserMailer.password_reset(user, token).deliver_now
     end
 
     def token
