@@ -4,7 +4,7 @@ CURRENT_DIR=$(pwd)
 # Clone into a temp folder...
 rm -rf /tmp/farmbot_frontend
 mkdir /tmp/farmbot_frontend
-git clone https://github.com/farmbot/farmbot-web-frontend.git /tmp/farmbot_frontend
+git clone https://github.com/kevstessens/farmbot-web-frontend.git /tmp/farmbot_frontend
 cd /tmp/farmbot_frontend
 if [ "$NPM_ADDON" ]; then
     echo "NPM ADD ON DETECTED... INSTALLING"
@@ -19,4 +19,4 @@ cd $CURRENT_DIR
 # Move it over to the rails /public directory and install deps
 mkdir public/ -p
 
-cp -R /tmp/farmbot_frontend/public/* public/ 
+cp -R /tmp/farmbot_frontend/public/* public/
