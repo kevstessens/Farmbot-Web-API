@@ -6,13 +6,13 @@ class UserMailer < ApplicationMailer
                    $API_URL +
                    "/verify.html?token=" +
                    (user.verification_token || "ERROR")
-      mail(to: @user.email, subject: 'Welcome to The FarmBot Web App!')
+      mail(to: @user.email, subject: 'Welcome to The LaurBot Web App!')
     end
 
     def password_reset(user, raw_token)
       @user  = user
       @token = raw_token
       @host  = $API_URL
-      mail(to: @user.email, subject: 'FarmBot Password Reset Instructions')
+      mail(to: @user.email, subject: 'LaurBot Password Reset Instructions')
     end
 end
